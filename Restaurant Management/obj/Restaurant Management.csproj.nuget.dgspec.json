@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Noz\\CSDLNC\\Project\\Restaurant Management\\Restaurant Management\\Restaurant Management.csproj": {}
+    "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj": {}
   },
   "projects": {
-    "D:\\Noz\\CSDLNC\\Project\\Restaurant Management\\Restaurant Management\\Restaurant Management.csproj": {
+    "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Noz\\CSDLNC\\Project\\Restaurant Management\\Restaurant Management\\Restaurant Management.csproj",
+        "projectUniqueName": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
         "projectName": "Restaurant Management",
-        "projectPath": "D:\\Noz\\CSDLNC\\Project\\Restaurant Management\\Restaurant Management\\Restaurant Management.csproj",
+        "projectPath": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
         "packagesPath": "C:\\Users\\quoct\\.nuget\\packages\\",
-        "outputPath": "D:\\Noz\\CSDLNC\\Project\\Restaurant Management\\Restaurant Management\\obj\\",
+        "outputPath": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\quoct\\AppData\\Roaming\\NuGet\\NuGet.Config",

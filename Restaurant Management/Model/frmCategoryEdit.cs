@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Restaurant_Management.CRUDOperations;
+using Restaurant_Management.CRUD;
+using static Restaurant_Management.CRUD.CRUDCategory;
 
 namespace Restaurant_Management.Model
 {
@@ -40,7 +41,7 @@ namespace Restaurant_Management.Model
             string editedName = txtEditName.Text; // Lấy Name từ TextBox txtCategoryName
 
             // Thực hiện logic cập nhật dữ liệu trong cơ sở dữ liệu MongoDB
-            bool updateSuccess = CRUDOperations.UpdateCategory(editedID, editedName);
+            bool updateSuccess = CRUDCategory.UpdateCategory(editedID, editedName,"Category");
 
             if (updateSuccess)
             {

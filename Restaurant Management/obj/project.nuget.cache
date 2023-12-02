@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KUsxxCtyESrWXuAV7miNJqFN15P5Q1GORhQLaJ9DwZ7KjrbZWWvuOI5ks/vUvsavk83DpWnwGfd/0A+i6XYehw==",
+  "dgSpecHash": "fLulqnU1uzny4dchIkiSNKVIqP9cUXoSFcc9czUtuTgAok7mkgOf2d3wiJT/Ctn5bp1zWNJ+fidz7dAV252cDQ==",
   "success": true,
-  "projectFilePath": "D:\\Noz\\CSDLNC\\Project\\Restaurant Management\\Restaurant Management\\Restaurant Management.csproj",
+  "projectFilePath": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\quoct\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\quoct\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

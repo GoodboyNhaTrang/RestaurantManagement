@@ -1,4 +1,5 @@
-﻿using Restaurant_Management.View;
+﻿using Restaurant_Management.CRUD;
+using Restaurant_Management.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,7 +52,7 @@ namespace Restaurant_Management
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            lblUser.Text = "Good morning " + CRUDOperations.Name;
+            lblUser.Text = "Good morning " + Connect.Name;
 
         }
 

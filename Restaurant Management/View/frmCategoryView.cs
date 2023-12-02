@@ -1,4 +1,5 @@
-﻿using Restaurant_Management.Model;
+﻿using Restaurant_Management.CRUD;
+using Restaurant_Management.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Restaurant_Management.CRUDOperations;
+using static Restaurant_Management.CRUD.CRUDCategory;
 
 namespace Restaurant_Management.View
 {
@@ -50,19 +51,42 @@ namespace Restaurant_Management.View
                 UpdateGridViewData();
             }
 
+            if (e.RowIndex >= 0 && guna2DataGridView1.Columns[e.ColumnIndex].Name == "dgvDel")
+            {
+                DataGridViewRow selectedRow = guna2DataGridView1.Rows[e.RowIndex];
+                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.OKCancel);
+                if (result == DialogResult.OK)
+                {
+                    string productIdToDelete = selectedRow.Cells["dgvid"].Value.ToString(); // Lấy ID của sản phẩm cần xóa từ cột "dgvid"
+                    bool isDeleted = CRUDCategory.DeleteCategory(productIdToDelete,"Category");
+
+                    if (isDeleted)
+                    {
+                        MessageBox.Show("Xóa sản phẩm thành công.");
+                        // Sau khi xóa, cập nhật lại DataGridView hoặc load lại dữ liệu
+                        UpdateGridViewData(); // Gọi hàm để tải lại dữ liệu vào DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa sản phẩm thất bại.");
+                    }
+                }
+
+            }
+
 
         }
         public void UpdateGridViewData()
         {
             guna2DataGridView1.Rows.Clear();
 
-            List<Category> categories = GetAllCategories();
+            List<Category> categories = GetAllCategories("Category");
 
             foreach (Category category in categories)
             {
                 int rowIndex = guna2DataGridView1.Rows.Add();
                 guna2DataGridView1.Rows[rowIndex].Cells["dgvid"].Value = category.Id;
-                guna2DataGridView1.Rows[rowIndex].Cells["dgvName"].Value = category.Name;
+                guna2DataGridView1.Rows[rowIndex].Cells["dgvName"].Value = category.CategoryName;
             }
         }
 
@@ -88,6 +112,10 @@ namespace Restaurant_Management.View
             frm.Show();
 
         }
+
+
+
+
 
 
     }
