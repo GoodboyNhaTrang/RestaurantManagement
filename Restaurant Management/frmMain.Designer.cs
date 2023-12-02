@@ -187,6 +187,7 @@
             btnStaff.Text = "Staff";
             btnStaff.TextAlign = HorizontalAlignment.Left;
             btnStaff.TextOffset = new Point(20, 0);
+            btnStaff.Click += btnStaff_Click;
             // 
             // btnTables
             // 

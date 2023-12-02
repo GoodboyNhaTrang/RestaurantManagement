@@ -100,7 +100,7 @@
             // 
             guna2Separator1.Location = new Point(12, 84);
             guna2Separator1.Name = "guna2Separator1";
-            guna2Separator1.Size = new Size(776, 10);
+            guna2Separator1.Size = new Size(765, 10);
             guna2Separator1.TabIndex = 3;
             // 
             // SimpleView

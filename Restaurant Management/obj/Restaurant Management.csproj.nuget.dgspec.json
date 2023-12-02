@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj": {}
+    "C:\\Users\\MyPC.SUSMEH\\Source\\Repos\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj": {}
   },
   "projects": {
-    "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj": {
+    "C:\\Users\\MyPC.SUSMEH\\Source\\Repos\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
+        "projectUniqueName": "C:\\Users\\MyPC.SUSMEH\\Source\\Repos\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
         "projectName": "Restaurant Management",
-        "projectPath": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
-        "packagesPath": "C:\\Users\\quoct\\.nuget\\packages\\",
-        "outputPath": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\obj\\",
+        "projectPath": "C:\\Users\\MyPC.SUSMEH\\Source\\Repos\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
+        "packagesPath": "C:\\Users\\MyPC.SUSMEH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\MyPC.SUSMEH\\Source\\Repos\\RestaurantManagement\\Restaurant Management\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\quoct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\MyPC.SUSMEH\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -72,7 +72,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

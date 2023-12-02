@@ -58,7 +58,7 @@ namespace Restaurant_Management
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            addControls( new frmHome());
+            addControls(new frmHome());
         }
 
         private void guna2Button7_Click(object sender, EventArgs e)
@@ -68,12 +68,17 @@ namespace Restaurant_Management
 
         private void btnCategories_Click(object sender, EventArgs e)
         {
-            addControls( new frmCategoryView());
+            addControls(new frmCategoryView());
         }
 
         private void ControlsPanel_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            addControls(new frmStaffView());
         }
     }
 }

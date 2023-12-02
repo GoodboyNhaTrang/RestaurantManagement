@@ -16,10 +16,16 @@
     <Compile Update="Model\frmCategoryEdit.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Model\frmStaffAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SimpleAdd.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SimpleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\frmStaffView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frmCategoryView.cs">
