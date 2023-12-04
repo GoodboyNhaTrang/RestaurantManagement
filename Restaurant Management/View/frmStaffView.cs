@@ -1,4 +1,5 @@
-﻿using Restaurant_Management.CRUD;
+﻿using Guna.UI2.WinForms;
+using Restaurant_Management.CRUD;
 using Restaurant_Management.Model;
 using System;
 using System.Collections;
@@ -55,6 +56,43 @@ namespace Restaurant_Management.View
         {
             frmStaffAdd frmStaffAdd = new frmStaffAdd();
             frmStaffAdd.ShowDialog();
+            GetData();
+        }
+
+        private void frmStaffView_listTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && frmStaffView_listTable.Columns[e.ColumnIndex].Name == "dgvedit")
+            {
+                DataGridViewRow selectedRow = frmStaffView_listTable.Rows[e.RowIndex];
+                Staff editStaff = new Staff()
+                {
+                    StaffId = Convert.ToInt32(selectedRow.Cells["StaffId"].Value.ToString()),
+                    StaffName = selectedRow.Cells["StaffName"].Value.ToString(),
+                    Role = selectedRow.Cells["Role"].Value.ToString(),
+                    Salary = Convert.ToInt32(selectedRow.Cells["Salary"].Value.ToString()),
+                };
+                frmStaffEdit editForm = new frmStaffEdit(editStaff);
+                editForm.ShowDialog();
+
+                // Sau khi chỉnh sửa, cập nhật lại dữ liệu trong DataGridView nếu cần
+
+                GetData();
+            }
+            else if (e.RowIndex >= 0 && frmStaffView_listTable.Columns[e.ColumnIndex].Name == "dgvDel")
+            {
+                DialogResult dialogResult = MessageBox.Show("Sure?", "Confirm", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    DataGridViewRow selectedRow = frmStaffView_listTable.Rows[e.RowIndex];
+                    CRUDStaff.DeleteStaff(Convert.ToInt32(selectedRow.Cells["StaffId"].Value.ToString()), collectionName);
+                }
+
+                GetData();
+            }
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
             GetData();
         }
     }

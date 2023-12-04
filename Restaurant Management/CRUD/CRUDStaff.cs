@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using Microsoft.VisualBasic;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 using System;
@@ -15,7 +16,7 @@ namespace Restaurant_Management.CRUD
     public class Staff
     {
         public ObjectId Id { get; set; }
-        public string StaffId { get; set; }
+        public int StaffId { get; set; }
         public string StaffName { get; set; }
         public string Role { get; set; }
         public int Salary { get; set; }
@@ -35,11 +36,13 @@ namespace Restaurant_Management.CRUD
                 Salary = Convert.ToInt32(Salary),
             };
             var sort = Builders<BsonDocument>.Sort.Descending("StaffId");
-            var id = Connect.collection.Find(_ => true).Sort(sort).Limit(1).ToList();
+            var findResult = Connect.collection.Find(_ => true).Sort(sort).Limit(1).ToList();
 
-            foreach (var item in id)
+
+            foreach (var bsonDocument in findResult)
             {
-                staff.StaffId = item.GetElement("StaffId").ToString() + 1;
+                staff.StaffId = bsonDocument.GetElement("StaffId").Value.AsInt32 + 1;
+
             }
             var result = staff.ToBsonDocument();
             result.Remove("_t");
@@ -96,6 +99,53 @@ namespace Restaurant_Management.CRUD
             {
                 // Hiển thị thông báo lỗi nếu có lỗi xảy ra
                 MessageBox.Show(ex.ToString());
+            }
+        }
+        public static bool UpdateStaff(Staff staff, string collectionName)
+        {
+            try
+            {
+
+                Connect.InitializeCollection(collectionName);
+
+                var filter = Builders<BsonDocument>.Filter.Eq("StaffId", staff.StaffId);
+                var set = Builders<BsonDocument>.Update.Set("StaffName", staff.StaffName).Set("Role", staff.Role).Set("Salary", staff.Salary);
+
+                var updateResult = Connect.collection.UpdateMany(filter, set);
+
+                if (updateResult.ModifiedCount > 0)
+                {
+                    return true; // Cập nhật thành công
+                }
+                else
+                {
+                    return false; // Không tìm thấy hoặc không cần cập nhật
+                }
+            }
+
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error updating category: " + ex.Message);
+                return false;
+            }
+        }
+        public static bool DeleteStaff(int staffId, string collectionName)
+        {
+            try
+            {
+                Connect.InitializeCollection(collectionName);
+                var filter = Builders<BsonDocument>.Filter.Eq("StaffId", staffId);
+                var delResult = Connect.collection.DeleteOne(filter);
+
+                if (delResult.DeletedCount > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error deleting product: " + e.Message);
+                return false;
             }
         }
     }

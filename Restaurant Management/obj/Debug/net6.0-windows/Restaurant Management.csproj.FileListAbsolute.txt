@@ -130,3 +130,4 @@ C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.pdb
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.genruntimeconfig.cache
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\ref\Restaurant Management.dll
+C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmStaffEdit.resources

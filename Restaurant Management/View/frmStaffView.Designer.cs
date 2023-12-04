@@ -34,6 +34,8 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             frmStaffView_listTable = new Guna.UI2.WinForms.Guna2DataGridView();
             Stt = new DataGridViewTextBoxColumn();
             StaffId = new DataGridViewTextBoxColumn();
@@ -43,6 +45,8 @@
             Salary = new DataGridViewTextBoxColumn();
             dgvedit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
+            StaffDelConfirm = new Guna.UI2.WinForms.Guna2MessageDialog();
+            guna2ContainerControl1 = new Guna.UI2.WinForms.Guna2ContainerControl();
             ((System.ComponentModel.ISupportInitialize)frmStaffView_listTable).BeginInit();
             SuspendLayout();
             // 
@@ -55,6 +59,7 @@
             txtSearch.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearch.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearch.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            txtSearch.TextChanged += txtSearch_TextChanged_1;
             // 
             // btnAdd
             // 
@@ -126,6 +131,7 @@
             frmStaffView_listTable.ThemeStyle.RowsStyle.Height = 25;
             frmStaffView_listTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
             frmStaffView_listTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            frmStaffView_listTable.CellContentClick += frmStaffView_listTable_CellContentClick;
             // 
             // Stt
             // 
@@ -200,11 +206,31 @@
             dgvDel.SortMode = DataGridViewColumnSortMode.Automatic;
             dgvDel.Width = 50;
             // 
+            // StaffDelConfirm
+            // 
+            StaffDelConfirm.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            StaffDelConfirm.Caption = "Confirm";
+            StaffDelConfirm.Icon = Guna.UI2.WinForms.MessageDialogIcon.None;
+            StaffDelConfirm.Parent = null;
+            StaffDelConfirm.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            StaffDelConfirm.Text = null;
+            // 
+            // guna2ContainerControl1
+            // 
+            guna2ContainerControl1.CustomizableEdges = customizableEdges3;
+            guna2ContainerControl1.Location = new Point(480, 62);
+            guna2ContainerControl1.Name = "guna2ContainerControl1";
+            guna2ContainerControl1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2ContainerControl1.Size = new Size(8, 8);
+            guna2ContainerControl1.TabIndex = 6;
+            guna2ContainerControl1.Text = "guna2ContainerControl1";
+            // 
             // frmStaffView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(guna2ContainerControl1);
             Controls.Add(frmStaffView_listTable);
             Name = "frmStaffView";
             Text = "Form1";
@@ -215,6 +241,7 @@
             Controls.SetChildIndex(txtSearch, 0);
             Controls.SetChildIndex(btnAdd, 0);
             Controls.SetChildIndex(frmStaffView_listTable, 0);
+            Controls.SetChildIndex(guna2ContainerControl1, 0);
             ((System.ComponentModel.ISupportInitialize)frmStaffView_listTable).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -235,5 +262,8 @@
         private DataGridViewTextBoxColumn Salary;
         private DataGridViewTextBoxColumn StaffId;
         private DataGridViewTextBoxColumn UserId;
+        private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog1;
+        private Guna.UI2.WinForms.Guna2ContainerControl guna2ContainerControl1;
+        private Guna.UI2.WinForms.Guna2MessageDialog StaffDelConfirm;
     }
 }
