@@ -915,19 +915,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\quoct\\.nuget\\packages\\": {}
+    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Daihoc\\CSDL\\project_c#_windown_form\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
       "projectName": "Restaurant Management",
-      "projectPath": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
-      "packagesPath": "C:\\Users\\quoct\\.nuget\\packages\\",
-      "outputPath": "D:\\Noz\\CSDLNC\\RM\\RestaurantManagement\\Restaurant Management\\obj\\",
+      "projectPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Daihoc\\CSDL\\project_c#_windown_form\\RM\\RestaurantManagement\\Restaurant Management\\Restaurant Management.csproj",
+      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ADMIN\\OneDrive\\Desktop\\Daihoc\\CSDL\\project_c#_windown_form\\RM\\RestaurantManagement\\Restaurant Management\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\quoct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -985,7 +985,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

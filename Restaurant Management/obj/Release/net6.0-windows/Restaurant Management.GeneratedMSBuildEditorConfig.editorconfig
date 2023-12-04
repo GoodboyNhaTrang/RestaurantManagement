@@ -14,4 +14,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Restaurant_Management
-build_property.ProjectDir = C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\
+build_property.ProjectDir = C:\Users\MyPC.SUSMEH\source\repos\RestaurantManagement\Restaurant Management\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
