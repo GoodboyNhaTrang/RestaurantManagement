@@ -130,3 +130,48 @@ C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.pdb
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.genruntimeconfig.cache
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\ref\Restaurant Management.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.exe
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.deps.json
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.runtimeconfig.json
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.pdb
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\AWSSDK.Core.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\AWSSDK.SecurityToken.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\DnsClient.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Guna.UI2.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Bson.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Driver.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Driver.Core.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Libmongocrypt.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\SharpCompress.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\Snappier.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\System.Management.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\ZstdSharp.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\runtimes\linux\native\libmongocrypt.so
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\runtimes\win\native\mongocrypt.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.frmHome.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.frmLogin.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.frmMain.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmCategoryAdd.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmCategoryEdit.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmStaffAdd.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Properties.Resources.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.SimpleAdd.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.SimpleView.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.View.frmCategoryView.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.View.frmStaffView.resources
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.GenerateResource.cache
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.AssemblyInfoInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.AssemblyInfo.cs
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.CopyComplete
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\refint\Restaurant Management.dll
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.pdb
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.genruntimeconfig.cache
+C:\Users\ADMIN\OneDrive\Desktop\Daihoc\CSDL\project_c#_windown_form\RM\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\ref\Restaurant Management.dll

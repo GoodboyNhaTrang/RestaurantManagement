@@ -45,6 +45,10 @@ namespace Restaurant_Management.View
         {
             GetData();
         }
+        public void ReloadData()
+        {
+            GetData();
+        }
 
         private void frmStaffView_ClientSizeChanged(object sender, EventArgs e)
         {

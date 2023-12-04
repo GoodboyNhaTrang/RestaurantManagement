@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using Restaurant_Management.CRUD;
+using Restaurant_Management.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,6 +40,10 @@ namespace Restaurant_Management.Model
             else
             {
                 CRUDStaff.AddNewStaff(frmStaffAdd_txtName.Text, frmStaffAdd_txtRole.Text, frmStaffAdd_txtSalary.Text, collectionName);
+                if (Application.OpenForms["frmStaffView"] is frmStaffView staffViewForm)
+                {
+                    staffViewForm.ReloadData();
+                }
             }
         }
     }
