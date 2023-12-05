@@ -80,5 +80,10 @@ namespace Restaurant_Management
         {
             addControls(new frmStaffView());
         }
+
+        private void btnTables_Click(object sender, EventArgs e)
+        {
+            addControls(new frmTableView());
+        }
     }
 }

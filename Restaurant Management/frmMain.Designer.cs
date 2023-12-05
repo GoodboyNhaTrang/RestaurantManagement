@@ -218,6 +218,7 @@
             btnTables.Text = "Tables";
             btnTables.TextAlign = HorizontalAlignment.Left;
             btnTables.TextOffset = new Point(20, 0);
+            btnTables.Click += btnTables_Click;
             // 
             // btnProduct
             // 
