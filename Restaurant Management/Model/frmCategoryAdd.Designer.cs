@@ -34,10 +34,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            label2 = new Label();
             txtCategoryName = new Guna.UI2.WinForms.Guna2TextBox();
             text = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -85,38 +81,9 @@
             btnClose.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnClose.Click += btnClose_Click_1;
             // 
-            // txtID
-            // 
-            txtID.CustomizableEdges = customizableEdges5;
-            txtID.DefaultText = "";
-            txtID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtID.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtID.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtID.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtID.Location = new Point(56, 114);
-            txtID.Name = "txtID";
-            txtID.PasswordChar = '\0';
-            txtID.PlaceholderText = "";
-            txtID.SelectedText = "";
-            txtID.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtID.Size = new Size(200, 36);
-            txtID.TabIndex = 9;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(56, 96);
-            label2.Name = "label2";
-            label2.Size = new Size(18, 15);
-            label2.TabIndex = 7;
-            label2.Text = "ID";
-            // 
             // txtCategoryName
             // 
-            txtCategoryName.CustomizableEdges = customizableEdges7;
+            txtCategoryName.CustomizableEdges = customizableEdges5;
             txtCategoryName.DefaultText = "";
             txtCategoryName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtCategoryName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -125,19 +92,19 @@
             txtCategoryName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCategoryName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtCategoryName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCategoryName.Location = new Point(56, 180);
+            txtCategoryName.Location = new Point(56, 143);
             txtCategoryName.Name = "txtCategoryName";
             txtCategoryName.PasswordChar = '\0';
             txtCategoryName.PlaceholderText = "";
             txtCategoryName.SelectedText = "";
-            txtCategoryName.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtCategoryName.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtCategoryName.Size = new Size(200, 36);
             txtCategoryName.TabIndex = 10;
             // 
             // text
             // 
             text.AutoSize = true;
-            text.Location = new Point(56, 162);
+            text.Location = new Point(56, 125);
             text.Name = "text";
             text.Size = new Size(39, 15);
             text.TabIndex = 8;
@@ -148,8 +115,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(309, 281);
-            Controls.Add(txtID);
-            Controls.Add(label2);
             Controls.Add(txtCategoryName);
             Controls.Add(text);
             Name = "frmCategoryAdd";
@@ -159,8 +124,6 @@
             Controls.SetChildIndex(guna2Panel1, 0);
             Controls.SetChildIndex(txtCategoryName, 0);
             Controls.SetChildIndex(guna2Panel2, 0);
-            Controls.SetChildIndex(label2, 0);
-            Controls.SetChildIndex(txtID, 0);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel2.ResumeLayout(false);
@@ -170,9 +133,6 @@
         }
 
         #endregion
-
-        public Guna.UI2.WinForms.Guna2TextBox txtID;
-        private Label label2;
         public Guna.UI2.WinForms.Guna2TextBox txtCategoryName;
         private Label text;
     }

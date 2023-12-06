@@ -1,6 +1,7 @@
 ﻿using Restaurant_Management.CRUD;
 using Restaurant_Management.View;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,20 +15,13 @@ namespace Restaurant_Management.Model
 {
     public partial class frmCategoryAdd : SimpleAdd
     {
+        private static string collectionName = "Category";
+   
         public frmCategoryAdd()
         {
             InitializeComponent();
         }
-        public frmCategoryAdd(string id, string name)
-        {
-            InitializeComponent();
 
-
-
-            // Hiển thị dữ liệu của sản phẩm được chọn trong các control trên form
-            txtID.Text = id;
-            txtCategoryName.Text = name;
-        }
 
 
 
@@ -38,25 +32,32 @@ namespace Restaurant_Management.Model
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            string ID = txtID.Text;
-            string categoryName = txtCategoryName.Text;
 
-            // Gọi hàm để lưu Category mới vào cơ sở dữ liệu
-            CRUDCategory.AddNewCategory(ID, categoryName,"Category");
+            if (txtCategoryName.Text == "")
+            {
+                MessageBox.Show("Điền đủ thông tin giùm");
+            }
+            else
+            {
+                CRUDCategory.Create(txtCategoryName.Text, collectionName);
+                MessageBox.Show("Create successfully");
+               frmCategoryView frm = new frmCategoryView();
+                frm.GetData();
+            }
 
-            MessageBox.Show("Created Successfully");
 
-            this.Close();
+            
 
-            frmCategoryView categoryView = new frmCategoryView();
-            categoryView.UpdateGridViewData();
-     
+           
+
 
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+
+
         }
 
         private void guna2Panel2_Paint(object sender, PaintEventArgs e)

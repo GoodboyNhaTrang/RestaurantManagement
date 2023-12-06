@@ -34,12 +34,14 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            dgvid = new DataGridViewTextBoxColumn();
-            dgvName = new DataGridViewTextBoxColumn();
+            frmCategoryView_listTable = new Guna.UI2.WinForms.Guna2DataGridView();
+            STT = new DataGridViewTextBoxColumn();
+            categoryId = new DataGridViewTextBoxColumn();
+            categoryName = new DataGridViewTextBoxColumn();
+            _id = new DataGridViewTextBoxColumn();
             dgvedit = new DataGridViewImageColumn();
             dgvDel = new DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)frmCategoryView_listTable).BeginInit();
             SuspendLayout();
             // 
             // txtSearch
@@ -70,12 +72,12 @@
             label2.Text = "Category List";
             label2.Click += label2_Click;
             // 
-            // guna2DataGridView1
+            // frmCategoryView_listTable
             // 
-            guna2DataGridView1.AllowUserToAddRows = false;
-            guna2DataGridView1.AllowUserToDeleteRows = false;
+            frmCategoryView_listTable.AllowUserToAddRows = false;
+            frmCategoryView_listTable.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
-            guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            frmCategoryView_listTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(232, 234, 237);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -83,10 +85,10 @@
             dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            guna2DataGridView1.ColumnHeadersHeight = 40;
-            guna2DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.Columns.AddRange(new DataGridViewColumn[] { dgvid, dgvName, dgvedit, dgvDel });
+            frmCategoryView_listTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            frmCategoryView_listTable.ColumnHeadersHeight = 40;
+            frmCategoryView_listTable.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            frmCategoryView_listTable.Columns.AddRange(new DataGridViewColumn[] { STT, categoryId, categoryName, _id, dgvedit, dgvDel });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -94,55 +96,69 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(231, 229, 255);
             dataGridViewCellStyle3.SelectionForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            guna2DataGridView1.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.Location = new Point(12, 100);
-            guna2DataGridView1.Name = "guna2DataGridView1";
-            guna2DataGridView1.ReadOnly = true;
-            guna2DataGridView1.RowHeadersVisible = false;
+            frmCategoryView_listTable.DefaultCellStyle = dataGridViewCellStyle3;
+            frmCategoryView_listTable.GridColor = Color.FromArgb(231, 229, 255);
+            frmCategoryView_listTable.Location = new Point(12, 100);
+            frmCategoryView_listTable.Name = "frmCategoryView_listTable";
+            frmCategoryView_listTable.ReadOnly = true;
+            frmCategoryView_listTable.RowHeadersVisible = false;
             dataGridViewCellStyle4.BackColor = Color.White;
             dataGridViewCellStyle4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle4.ForeColor = Color.FromArgb(71, 69, 94);
             dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(239, 241, 243);
             dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            guna2DataGridView1.RowTemplate.Height = 25;
-            guna2DataGridView1.Size = new Size(776, 250);
-            guna2DataGridView1.TabIndex = 4;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
-            guna2DataGridView1.ThemeStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = Color.White;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 40;
-            guna2DataGridView1.ThemeStyle.ReadOnly = true;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = Color.White;
-            guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            guna2DataGridView1.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.ThemeStyle.RowsStyle.Height = 25;
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
-            guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
-            guna2DataGridView1.CellContentClick += guna2DataGridView1_CellContentClick;
+            frmCategoryView_listTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            frmCategoryView_listTable.RowTemplate.Height = 25;
+            frmCategoryView_listTable.Size = new Size(776, 250);
+            frmCategoryView_listTable.TabIndex = 4;
+            frmCategoryView_listTable.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
+            frmCategoryView_listTable.ThemeStyle.AlternatingRowsStyle.Font = null;
+            frmCategoryView_listTable.ThemeStyle.AlternatingRowsStyle.ForeColor = Color.Empty;
+            frmCategoryView_listTable.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = Color.Empty;
+            frmCategoryView_listTable.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = Color.Empty;
+            frmCategoryView_listTable.ThemeStyle.BackColor = Color.White;
+            frmCategoryView_listTable.ThemeStyle.GridColor = Color.FromArgb(231, 229, 255);
+            frmCategoryView_listTable.ThemeStyle.HeaderStyle.BackColor = Color.White;
+            frmCategoryView_listTable.ThemeStyle.HeaderStyle.BorderStyle = DataGridViewHeaderBorderStyle.None;
+            frmCategoryView_listTable.ThemeStyle.HeaderStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            frmCategoryView_listTable.ThemeStyle.HeaderStyle.ForeColor = Color.White;
+            frmCategoryView_listTable.ThemeStyle.HeaderStyle.HeaightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            frmCategoryView_listTable.ThemeStyle.HeaderStyle.Height = 40;
+            frmCategoryView_listTable.ThemeStyle.ReadOnly = true;
+            frmCategoryView_listTable.ThemeStyle.RowsStyle.BackColor = Color.White;
+            frmCategoryView_listTable.ThemeStyle.RowsStyle.BorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            frmCategoryView_listTable.ThemeStyle.RowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            frmCategoryView_listTable.ThemeStyle.RowsStyle.ForeColor = Color.FromArgb(71, 69, 94);
+            frmCategoryView_listTable.ThemeStyle.RowsStyle.Height = 25;
+            frmCategoryView_listTable.ThemeStyle.RowsStyle.SelectionBackColor = Color.FromArgb(231, 229, 255);
+            frmCategoryView_listTable.ThemeStyle.RowsStyle.SelectionForeColor = Color.FromArgb(71, 69, 94);
+            frmCategoryView_listTable.CellContentClick += guna2DataGridView1_CellContentClick;
             // 
-            // dgvid
+            // STT
             // 
-            dgvid.HeaderText = "id";
-            dgvid.Name = "dgvid";
-            dgvid.ReadOnly = true;
+            STT.HeaderText = "STT";
+            STT.Name = "STT";
+            STT.ReadOnly = true;
             // 
-            // dgvName
+            // categoryId
             // 
-            dgvName.HeaderText = "Name";
-            dgvName.Name = "dgvName";
-            dgvName.ReadOnly = true;
+            categoryId.HeaderText = "id";
+            categoryId.Name = "categoryId";
+            categoryId.ReadOnly = true;
+            categoryId.Visible = false;
+            // 
+            // categoryName
+            // 
+            categoryName.HeaderText = "Name";
+            categoryName.Name = "categoryName";
+            categoryName.ReadOnly = true;
+            // 
+            // _id
+            // 
+            _id.HeaderText = "_id";
+            _id.Name = "_id";
+            _id.ReadOnly = true;
+            _id.Visible = false;
             // 
             // dgvedit
             // 
@@ -176,25 +192,28 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(800, 450);
-            Controls.Add(guna2DataGridView1);
+            Controls.Add(frmCategoryView_listTable);
             Name = "frmCategoryView";
             Text = "frmCategoryView";
             Load += frmCategoryView_Load;
+            ClientSizeChanged += frmCategoryView_ClientSizeChanged;
             Controls.SetChildIndex(label1, 0);
             Controls.SetChildIndex(label2, 0);
             Controls.SetChildIndex(txtSearch, 0);
             Controls.SetChildIndex(btnAdd, 0);
-            Controls.SetChildIndex(guna2DataGridView1, 0);
-            ((System.ComponentModel.ISupportInitialize)guna2DataGridView1).EndInit();
+            Controls.SetChildIndex(frmCategoryView_listTable, 0);
+            ((System.ComponentModel.ISupportInitialize)frmCategoryView_listTable).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridViewTextBoxColumn dgvid;
-        private DataGridViewTextBoxColumn dgvName;
+        public Guna.UI2.WinForms.Guna2DataGridView frmCategoryView_listTable;
+        private DataGridViewTextBoxColumn STT;
+        private DataGridViewTextBoxColumn categoryId;
+        private DataGridViewTextBoxColumn categoryName;
+        private DataGridViewTextBoxColumn _id;
         private DataGridViewImageColumn dgvedit;
         private DataGridViewImageColumn dgvDel;
-        public Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
     }
 }

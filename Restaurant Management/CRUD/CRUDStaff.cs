@@ -74,7 +74,7 @@ namespace Restaurant_Management.CRUD
                 for (int i = 0; i < documents.Count; ++i)
                 {
                     var row = dataTable.NewRow();
-                    row[0] = i;
+                    row[0] = i+1;
                     foreach (var element in documents[i])
                     {
                         // Giả sử chỉ lấy giá trị của các phần tử BsonDocument để hiển thị trong DataGridView

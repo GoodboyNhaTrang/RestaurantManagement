@@ -1,6 +1,9 @@
-﻿using Restaurant_Management.CRUD;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using MongoDB.Driver;
+using Restaurant_Management.CRUD;
 using Restaurant_Management.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,10 +18,35 @@ namespace Restaurant_Management.View
 {
     public partial class frmCategoryView : SimpleView
     {
+
+        private static string collectionName = "Category";
         public frmCategoryView()
         {
             InitializeComponent();
         }
+
+
+        public void GetData()
+        {
+            try
+            {
+                string fieldName = "categoryName";
+                string qry = $"{txtSearch.Text}"; // Sử dụng chuỗi truy vấn cho biểu thức chính quy
+                ListBox lb = new ListBox();
+                lb.Items.Clear();
+                lb.Items.Add(_id);
+                lb.Items.Add(categoryId);
+
+                lb.Items.Add(categoryName);
+
+                CRUDCategory.Read(collectionName, fieldName, qry, frmCategoryView_listTable, lb);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -37,86 +65,62 @@ namespace Restaurant_Management.View
 
         private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && guna2DataGridView1.Columns[e.ColumnIndex].Name == "dgvedit")
+            if (e.RowIndex >= 0 && frmCategoryView_listTable.Columns[e.ColumnIndex].Name == "dgvedit")
             {
-                DataGridViewRow selectedRow = guna2DataGridView1.Rows[e.RowIndex];
-                string editID = selectedRow.Cells["dgvid"].Value.ToString();
-                string editName = selectedRow.Cells["dgvName"].Value.ToString();
+                DataGridViewRow selectedRow = frmCategoryView_listTable.Rows[e.RowIndex];
+                Category editCategory = new Category()
+                {
+                    categoryId = Convert.ToInt32(selectedRow.Cells["categoryId"].Value.ToString()),
+                    categoryName = selectedRow.Cells["categoryName"].Value.ToString(),
 
-                frmCategoryEdit editForm = new frmCategoryEdit(editID, editName);
+                };
+                frmCategoryEdit editForm = new frmCategoryEdit(editCategory);
                 editForm.ShowDialog();
 
                 // Sau khi chỉnh sửa, cập nhật lại dữ liệu trong DataGridView nếu cần
-          
-                UpdateGridViewData();
+
+                GetData();
             }
 
-            if (e.RowIndex >= 0 && guna2DataGridView1.Columns[e.ColumnIndex].Name == "dgvDel")
+            else if (e.RowIndex >= 0 && frmCategoryView_listTable.Columns[e.ColumnIndex].Name == "dgvDel")
             {
-                DataGridViewRow selectedRow = guna2DataGridView1.Rows[e.RowIndex];
-                DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm này?", "Xác nhận xóa", MessageBoxButtons.OKCancel);
-                if (result == DialogResult.OK)
+                DialogResult dialogResult = MessageBox.Show("Sure?", "Confirm", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    string productIdToDelete = selectedRow.Cells["dgvid"].Value.ToString(); // Lấy ID của sản phẩm cần xóa từ cột "dgvid"
-                    bool isDeleted = CRUDCategory.DeleteCategory(productIdToDelete,"Category");
-
-                    if (isDeleted)
-                    {
-                        MessageBox.Show("Xóa sản phẩm thành công.");
-                        // Sau khi xóa, cập nhật lại DataGridView hoặc load lại dữ liệu
-                        UpdateGridViewData(); // Gọi hàm để tải lại dữ liệu vào DataGridView
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa sản phẩm thất bại.");
-                    }
+                    DataGridViewRow selectedRow = frmCategoryView_listTable.Rows[e.RowIndex];
+                    CRUDCategory.Delete(Convert.ToInt32(selectedRow.Cells["categoryId"].Value.ToString()), collectionName);
                 }
 
+                GetData();
             }
 
 
         }
-        public void UpdateGridViewData()
-        {
-            guna2DataGridView1.Rows.Clear();
 
-            List<Category> categories = GetAllCategories("Category");
-
-            foreach (Category category in categories)
-            {
-                int rowIndex = guna2DataGridView1.Rows.Add();
-                guna2DataGridView1.Rows[rowIndex].Cells["dgvid"].Value = category.Id;
-                guna2DataGridView1.Rows[rowIndex].Cells["dgvName"].Value = category.CategoryName;
-            }
-        }
 
 
         public void frmCategoryView_Load(object sender, EventArgs e)
         {
+            GetData();
 
-
-            // Xác định cột cho DataGridView (nếu chưa được xác định)
-
-
-            // Gọi hàm GetAllCategories để lấy danh sách các Category từ cơ sở dữ liệu
-            UpdateGridViewData();
-
-             
 
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-           frmCategoryAdd frm = new frmCategoryAdd();
+
+            frmCategoryAdd frm = new frmCategoryAdd();
             frm.Show();
 
         }
 
+        private void frmCategoryView_ClientSizeChanged(object sender, EventArgs e)
+        {
+          
+                frmCategoryView_listTable.Width = ClientSize.Width - ClientSize.Width * 5 / 100; ;
+                frmCategoryView_listTable.Height = ClientSize.Height - frmCategoryView_listTable.Location.Y;
+            
 
-
-
-
-
+        }
     }
 }

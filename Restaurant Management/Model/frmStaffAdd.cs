@@ -32,14 +32,20 @@ namespace Restaurant_Management.Model
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            if ( frmStaffAdd_txtName.Text == "" || frmStaffAdd_txtRole.Text == "" || frmStaffAdd_txtSalary.Text == "")
+            if (frmStaffAdd_txtName.Text == "" || frmStaffAdd_txtRole.Text == "" || frmStaffAdd_txtSalary.Text == "")
             {
                 frmStaffAdd_messageDialog.Show("Điền đủ thông tin giùm");
             }
             else
             {
                 CRUDStaff.AddNewStaff(frmStaffAdd_txtName.Text, frmStaffAdd_txtRole.Text, frmStaffAdd_txtSalary.Text, collectionName);
+                MessageBox.Show("created successf");
             }
+        }
+
+        private void frmStaffAdd_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

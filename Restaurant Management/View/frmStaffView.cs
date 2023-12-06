@@ -49,7 +49,8 @@ namespace Restaurant_Management.View
 
         private void frmStaffView_ClientSizeChanged(object sender, EventArgs e)
         {
-            frmStaffView_listTable.Width = ClientSize.Width - ClientSize.Width * 5 / 100;
+            frmStaffView_listTable.Width = ClientSize.Width - ClientSize.Width * 5 / 100; ;
+            frmStaffView_listTable.Height = ClientSize.Height - frmStaffView_listTable.Location.Y;
         }
 
         private void btnAdd_Click_1(object sender, EventArgs e)

@@ -131,3 +131,49 @@ C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.genruntimeconfig.cache
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\ref\Restaurant Management.dll
 C:\Users\MyPC.SUSMEH\Source\Repos\RestaurantManagement\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmStaffEdit.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.exe
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.deps.json
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.runtimeconfig.json
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Restaurant Management.pdb
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\AWSSDK.Core.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\AWSSDK.SecurityToken.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\DnsClient.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Guna.UI2.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Bson.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Driver.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Driver.Core.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\MongoDB.Libmongocrypt.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\SharpCompress.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\Snappier.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\System.Management.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\ZstdSharp.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\runtimes\linux\native\libmongocrypt.so
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\runtimes\osx\native\libmongocrypt.dylib
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\runtimes\win\native\mongocrypt.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.AssemblyReference.cache
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.frmHome.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.frmLogin.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.frmMain.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmCategoryAdd.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmCategoryEdit.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmStaffAdd.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmStaffEdit.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Properties.Resources.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.SimpleAdd.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.SimpleView.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.View.frmCategoryView.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.View.frmStaffView.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.GenerateResource.cache
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.GeneratedMSBuildEditorConfig.editorconfig
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.AssemblyInfoInputs.cache
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.AssemblyInfo.cs
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.CoreCompileInputs.cache
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.csproj.CopyComplete
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\refint\Restaurant Management.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.pdb
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.genruntimeconfig.cache
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\ref\Restaurant Management.dll

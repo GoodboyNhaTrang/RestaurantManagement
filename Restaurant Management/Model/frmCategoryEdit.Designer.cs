@@ -34,12 +34,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            txtEditID = new Guna.UI2.WinForms.Guna2TextBox();
-            label2 = new Label();
             txtEditName = new Guna.UI2.WinForms.Guna2TextBox();
             text = new Label();
+            catId = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
@@ -82,38 +79,9 @@
             btnClose.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnClose.Click += btnClose_Click_1;
             // 
-            // txtEditID
-            // 
-            txtEditID.CustomizableEdges = customizableEdges5;
-            txtEditID.DefaultText = "";
-            txtEditID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtEditID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtEditID.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtEditID.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtEditID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditID.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEditID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditID.Location = new Point(46, 116);
-            txtEditID.Name = "txtEditID";
-            txtEditID.PasswordChar = '\0';
-            txtEditID.PlaceholderText = "";
-            txtEditID.SelectedText = "";
-            txtEditID.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtEditID.Size = new Size(200, 36);
-            txtEditID.TabIndex = 5;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(46, 98);
-            label2.Name = "label2";
-            label2.Size = new Size(18, 15);
-            label2.TabIndex = 3;
-            label2.Text = "ID";
-            // 
             // txtEditName
             // 
-            txtEditName.CustomizableEdges = customizableEdges7;
+            txtEditName.CustomizableEdges = customizableEdges5;
             txtEditName.DefaultText = "";
             txtEditName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEditName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -122,31 +90,39 @@
             txtEditName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEditName.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtEditName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditName.Location = new Point(46, 182);
+            txtEditName.Location = new Point(44, 142);
             txtEditName.Name = "txtEditName";
             txtEditName.PasswordChar = '\0';
             txtEditName.PlaceholderText = "";
             txtEditName.SelectedText = "";
-            txtEditName.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtEditName.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtEditName.Size = new Size(200, 36);
             txtEditName.TabIndex = 6;
             // 
             // text
             // 
             text.AutoSize = true;
-            text.Location = new Point(46, 164);
+            text.Location = new Point(44, 124);
             text.Name = "text";
             text.Size = new Size(39, 15);
             text.TabIndex = 4;
             text.Text = "Name";
+            // 
+            // catId
+            // 
+            catId.AutoSize = true;
+            catId.Location = new Point(45, 94);
+            catId.Name = "catId";
+            catId.Size = new Size(0, 15);
+            catId.TabIndex = 7;
+            catId.Visible = false;
             // 
             // frmCategoryEdit
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(303, 293);
-            Controls.Add(txtEditID);
-            Controls.Add(label2);
+            Controls.Add(catId);
             Controls.Add(txtEditName);
             Controls.Add(text);
             Name = "frmCategoryEdit";
@@ -156,8 +132,7 @@
             Controls.SetChildIndex(guna2Panel2, 0);
             Controls.SetChildIndex(text, 0);
             Controls.SetChildIndex(txtEditName, 0);
-            Controls.SetChildIndex(label2, 0);
-            Controls.SetChildIndex(txtEditID, 0);
+            Controls.SetChildIndex(catId, 0);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2Panel1.ResumeLayout(false);
             guna2Panel2.ResumeLayout(false);
@@ -167,10 +142,8 @@
         }
 
         #endregion
-
-        public Guna.UI2.WinForms.Guna2TextBox txtEditID;
-        private Label label2;
         public Guna.UI2.WinForms.Guna2TextBox txtEditName;
         private Label text;
+        private Label catId;
     }
 }

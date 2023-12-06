@@ -14,17 +14,18 @@ namespace Restaurant_Management.Model
 {
     public partial class frmCategoryEdit : SimpleAdd
     {
+        private static string collectionName = "Category";
         public frmCategoryEdit()
         {
             InitializeComponent();
         }
-        public frmCategoryEdit(string id, string name)
+
+        public frmCategoryEdit(Category category)
         {
             InitializeComponent();
-            txtEditID.Text = id;
-            txtEditName.Text = name;
+            catId.Text = category.categoryId.ToString();
+            txtEditName.Text = category.categoryName.ToString();
         }
-
         private void frmCategoryEdit_Load(object sender, EventArgs e)
         {
 
@@ -37,24 +38,15 @@ namespace Restaurant_Management.Model
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            string editedID = txtEditID.Text; // Lấy ID từ TextBox txtID
-            string editedName = txtEditName.Text; // Lấy Name từ TextBox txtCategoryName
-
-            // Thực hiện logic cập nhật dữ liệu trong cơ sở dữ liệu MongoDB
-            bool updateSuccess = CRUDCategory.UpdateCategory(editedID, editedName,"Category");
-
-            if (updateSuccess)
+            Category editedCategory = new()
             {
-                // Cập nhật dữ liệu thành công, thông báo và cập nhật DataGridView
-                MessageBox.Show("Category updated successfully!");
+                categoryId = Convert.ToInt32(catId.Text),
+                categoryName = txtEditName.Text
 
+            };
+            CRUDCategory.Update(editedCategory, collectionName);
+            MessageBox.Show("Edited successfully");
 
-                this.Close(); // Đóng form sau khi cập nhật
-            }
-            else
-            {
-                MessageBox.Show("Failed to update category. Please try again!");
-            }
         }
 
         private void btnClose_Click_1(object sender, EventArgs e)

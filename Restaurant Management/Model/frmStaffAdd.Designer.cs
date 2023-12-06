@@ -198,6 +198,7 @@
             Controls.Add(frmStaffAdd_txtName);
             Name = "frmStaffAdd";
             Text = "frmStaffAdd";
+            Load += frmStaffAdd_Load;
             Controls.SetChildIndex(guna2Panel1, 0);
             Controls.SetChildIndex(guna2Panel2, 0);
             Controls.SetChildIndex(frmStaffAdd_txtName, 0);
