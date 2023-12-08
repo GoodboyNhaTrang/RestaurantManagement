@@ -43,5 +43,10 @@ namespace Restaurant_Management.Model
         {
             this.Close();
         }
+
+        private void frmStaffEdit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

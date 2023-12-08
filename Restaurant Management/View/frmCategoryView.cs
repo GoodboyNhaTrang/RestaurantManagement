@@ -116,10 +116,10 @@ namespace Restaurant_Management.View
 
         private void frmCategoryView_ClientSizeChanged(object sender, EventArgs e)
         {
-          
-                frmCategoryView_listTable.Width = ClientSize.Width - ClientSize.Width * 5 / 100; ;
-                frmCategoryView_listTable.Height = ClientSize.Height - frmCategoryView_listTable.Location.Y;
-            
+
+            frmCategoryView_listTable.Width = ClientSize.Width - ClientSize.Width * 5 / 100; ;
+            frmCategoryView_listTable.Height = ClientSize.Height - frmCategoryView_listTable.Location.Y;
+
 
         }
     }

@@ -16,7 +16,7 @@ namespace Restaurant_Management.Model
     public partial class frmCategoryAdd : SimpleAdd
     {
         private static string collectionName = "Category";
-   
+
         public frmCategoryAdd()
         {
             InitializeComponent();
@@ -41,14 +41,13 @@ namespace Restaurant_Management.Model
             {
                 CRUDCategory.Create(txtCategoryName.Text, collectionName);
                 MessageBox.Show("Create successfully");
-               frmCategoryView frm = new frmCategoryView();
-                frm.GetData();
+              
             }
 
 
-            
 
-           
+
+
 
 
         }

@@ -77,6 +77,7 @@
             // 
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2Panel2.Size = new Size(307, 91);
+            guna2Panel2.Paint += guna2Panel2_Paint;
             // 
             // btnClose
             // 

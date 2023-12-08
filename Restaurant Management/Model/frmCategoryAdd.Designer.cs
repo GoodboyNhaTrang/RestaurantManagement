@@ -41,6 +41,12 @@
             guna2Panel2.SuspendLayout();
             SuspendLayout();
             // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.options;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            // 
             // label1
             // 
             label1.Location = new Point(105, 39);

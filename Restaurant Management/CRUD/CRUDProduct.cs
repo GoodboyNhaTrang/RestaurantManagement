@@ -1,54 +1,56 @@
-﻿using System;
-using System.Collections;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
+using MongoDB.Libmongocrypt;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Xml.Linq;
-using Microsoft.VisualBasic.ApplicationServices;
-using MongoDB.Bson;
-using MongoDB.Driver;
-
-
-using MongoDB.Driver.Core.Configuration;
 
 namespace Restaurant_Management.CRUD
 {
-
-    public class Category
+    public class Product
     {
-
+        public int productId { get; set; }
+        public string productName { get; set; }
+        public int categoryId { get; set; }
         public string categoryName { get; set; }
 
-        public int categoryId { get; set; }
+        public int productPrice { get; set; }
+        public Binary productImage { get; set; }
+
         // Các thuộc tính khác nếu cần
     }
-    public class CRUDCategory
-    {
 
+    internal class CRUDProduct
+    {
        
 
-
-        public static void Create(string categoryName, string collectionName)
+        public static void Create(Product product, string collectionName)
         {
 
             Connect.InitializeCollection(collectionName);
 
-            Category category = new()
+             product = new()
             {
-                categoryName = categoryName
-            };
-            var sort = Builders<BsonDocument>.Sort.Descending("categoryId");
+                productId = product.productId,
+                 productName = product.productName,
+   
+                 productPrice = product.productPrice,
+                 categoryId = product.categoryId,
+                 categoryName = product.categoryName,
+             };
+            var sort = Builders<BsonDocument>.Sort.Descending("productId");
             var findResult = Connect.collection.Find(_ => true).Sort(sort).Limit(1).ToList();
 
 
             foreach (var bsonDocument in findResult)
             {
-                category.categoryId = bsonDocument.GetElement("categoryId").Value.AsInt32 + 1;
+                product.productId = bsonDocument.GetElement("productId").Value.AsInt32 + 1;
 
             }
-            var result = category.ToBsonDocument();
+            var result = product.ToBsonDocument();
             result.Remove("_t");
             Connect.collection.InsertOne(result);
         }
@@ -107,15 +109,15 @@ namespace Restaurant_Management.CRUD
             }
         }
 
-        public static bool Update(Category category, string collectionName)
+        public static bool Update(Product product, string collectionName)
         {
             try
             {
 
                 Connect.InitializeCollection(collectionName);
 
-                var filter = Builders<BsonDocument>.Filter.Eq("categoryId", category.categoryId);
-                var set = Builders<BsonDocument>.Update.Set("categoryName", category.categoryName);
+                var filter = Builders<BsonDocument>.Filter.Eq("productId", product.productId);
+                var set = Builders<BsonDocument>.Update.Set("productName", product.productName).Set("productPrice", product.productPrice).Set("categoryName", product.categoryName);
 
                 var updateResult = Connect.collection.UpdateOne(filter, set);
 
@@ -136,12 +138,13 @@ namespace Restaurant_Management.CRUD
             }
         }
 
-        public static bool Delete(int categoryId, string collectionName)
+
+        public static bool Delete(int productId, string collectionName)
         {
             try
             {
                 Connect.InitializeCollection(collectionName);
-                var filter = Builders<BsonDocument>.Filter.Eq("categoryId", categoryId);
+                var filter = Builders<BsonDocument>.Filter.Eq("productId", productId);
                 var delResult = Connect.collection.DeleteOne(filter);
 
                 if (delResult.DeletedCount > 0)
@@ -157,30 +160,5 @@ namespace Restaurant_Management.CRUD
         }
 
 
-
-        public static List<Category> GetAllCategories(string collectionName)
-        {
-            // Lấy tất cả Category từ collection và trả về danh sách
-
-            Connect.InitializeCollection(collectionName);
-
-            var categories = Connect.collection.Find(new BsonDocument()).ToList();
-
-            var categoryList = new List<Category>();
-            foreach (var bsonDocument in categories)
-            {
-                var category = new Category
-                {
-
-                    categoryName = bsonDocument["categoryName"].AsString
-                    // Các thuộc tính khác nếu có
-                };
-                categoryList.Add(category);
-            }
-
-            return categoryList;
-
-        }
     }
 }
-

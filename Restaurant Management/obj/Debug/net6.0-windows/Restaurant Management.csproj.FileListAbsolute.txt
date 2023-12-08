@@ -177,3 +177,6 @@ D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\refint\R
 D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.pdb
 D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant Management.genruntimeconfig.cache
 D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\ref\Restaurant Management.dll
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmProductAdd.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.Model.frmProductEdit.resources
+D:\Noz\CSDLNC\Project\RM\Restaurant Management\obj\Debug\net6.0-windows\Restaurant_Management.View.frmProductView.resources

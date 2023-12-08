@@ -207,6 +207,7 @@
             Controls.Add(label2);
             Name = "frmStaffEdit";
             Text = "frmStaffEdit";
+            Load += frmStaffEdit_Load;
             Controls.SetChildIndex(label2, 0);
             Controls.SetChildIndex(txtStaffName, 0);
             Controls.SetChildIndex(label3, 0);

@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtEditName = new Guna.UI2.WinForms.Guna2TextBox();
             text = new Label();
             catId = new Label();
@@ -41,6 +41,12 @@
             guna2Panel1.SuspendLayout();
             guna2Panel2.SuspendLayout();
             SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.options;
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             // 
             // label1
             // 
@@ -55,18 +61,18 @@
             btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges7;
             btnSave.Click += btnSave_Click_1;
             // 
             // guna2Panel1
             // 
             guna2Panel1.Location = new Point(0, 234);
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna2Panel1.Size = new Size(303, 59);
             // 
             // guna2Panel2
             // 
-            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges9;
             guna2Panel2.Size = new Size(303, 91);
             // 
             // btnClose
@@ -76,12 +82,12 @@
             btnClose.DisabledState.CustomBorderColor = Color.DarkGray;
             btnClose.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnClose.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnClose.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnClose.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnClose.Click += btnClose_Click_1;
             // 
             // txtEditName
             // 
-            txtEditName.CustomizableEdges = customizableEdges5;
+            txtEditName.CustomizableEdges = customizableEdges11;
             txtEditName.DefaultText = "";
             txtEditName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEditName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -95,7 +101,7 @@
             txtEditName.PasswordChar = '\0';
             txtEditName.PlaceholderText = "";
             txtEditName.SelectedText = "";
-            txtEditName.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtEditName.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtEditName.Size = new Size(200, 36);
             txtEditName.TabIndex = 6;
             // 
@@ -111,11 +117,10 @@
             // catId
             // 
             catId.AutoSize = true;
-            catId.Location = new Point(45, 94);
+            catId.Location = new Point(44, 94);
             catId.Name = "catId";
             catId.Size = new Size(0, 15);
             catId.TabIndex = 7;
-            catId.Visible = false;
             // 
             // frmCategoryEdit
             // 

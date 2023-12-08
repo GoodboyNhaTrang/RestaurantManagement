@@ -248,6 +248,7 @@
             btnProduct.Text = "Product";
             btnProduct.TextAlign = HorizontalAlignment.Left;
             btnProduct.TextOffset = new Point(20, 0);
+            btnProduct.Click += btnProduct_Click;
             // 
             // btnCategories
             // 

@@ -16,6 +16,12 @@
     <Compile Update="Model\frmCategoryEdit.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Model\frmProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Model\frmProductEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Model\frmStaffAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,6 +32,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SimpleView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\frmProductView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\frmStaffView.cs">

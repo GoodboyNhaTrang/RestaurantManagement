@@ -1,0 +1,128 @@
+﻿using Restaurant_Management.CRUD;
+using Restaurant_Management.Model;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using static Restaurant_Management.CRUD.CRUDProduct;
+
+
+
+namespace Restaurant_Management.Model
+{
+    public partial class frmProductEdit : SimpleAdd
+    {
+        public frmProductEdit()
+        {
+            InitializeComponent();
+        }
+        string collectionName = "Product";
+
+        public frmProductEdit(Product product)
+        {
+            InitializeComponent();
+            txtProductName.Text = product.productName.ToString();
+            txtPrice.Text = product.productPrice.ToString();
+            cbProduct.Text = product.categoryName.ToString();
+
+        }
+        public void LoadCategoriesToComboBox()
+        {
+            // Gọi phương thức Read của CRUDCategory để lấy danh sách các category
+            List<Category> categories = CRUDCategory.GetAllCategories("Category");
+
+            // Xóa các mục hiện tại trong ComboBox
+            cbProduct.Items.Clear();
+
+            // Duyệt qua danh sách category và thêm từng category vào ComboBox
+            foreach (var category in categories)
+            {
+                cbProduct.Items.Add(category.categoryName);
+            }
+        }
+
+        private void frmProductEdit_Load(object sender, EventArgs e)
+        {
+
+            LoadCategoriesToComboBox();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtImage_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cbEditProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEditProductName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click_2(object sender, EventArgs e)
+        {
+            Product product = new()
+            {
+                //productId = Convert.ToInt32(txtProductId.Text),
+                productName = txtProductName.Text,
+                productPrice = Convert.ToInt32(txtPrice.Text),
+                categoryName = cbProduct.Text,
+
+            };
+
+            CRUDProduct.Update(product, collectionName);
+            MessageBox.Show("Edited successfully");
+
+        }
+
+        private void btnClose_Click_2(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cbProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbProduct.Text = cbProduct.SelectedIndex.ToString();
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnBrowser_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Chỉ cho phép người dùng chọn file hình ảnh
+            openFileDialog.Filter = "Image Files (*.jpg; *.jpeg; *.png; *.gif; *.bmp; *.jfif)|*.jpg; *.jpeg; *.png; *.gif; *.bmp; *.jfif";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                // Lấy đường dẫn của file hình ảnh đã chọn
+                string selectedImagePath = openFileDialog.FileName;
+
+                // Hiển thị hình ảnh trong PictureBox
+                txtImage.Image = new Bitmap(selectedImagePath);
+            }
+        }
+    }
+}
