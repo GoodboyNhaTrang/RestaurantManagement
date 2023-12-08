@@ -75,6 +75,7 @@
             // 
             // guna2Panel2
             // 
+            guna2Panel2.Dock = DockStyle.None;
             guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2Panel2.Size = new Size(410, 91);
             // 

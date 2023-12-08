@@ -1,5 +1,6 @@
 ﻿using Restaurant_Management.CRUD;
 using Restaurant_Management.Model;
+using Restaurant_Management.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,9 @@ namespace Restaurant_Management.Model
 {
     public partial class frmProductEdit : SimpleAdd
     {
+        private int tempCategoryID;
+        private int productID;
+        private string catName;
         public frmProductEdit()
         {
             InitializeComponent();
@@ -26,10 +30,11 @@ namespace Restaurant_Management.Model
         public frmProductEdit(Product product)
         {
             InitializeComponent();
+            productID = product.productId;
             txtProductName.Text = product.productName.ToString();
             txtPrice.Text = product.productPrice.ToString();
-            cbProduct.Text = product.categoryName.ToString();
-
+            catName = product.categoryName.ToString();
+            tempCategoryID = Convert.ToInt32(product.categoryId.ToString());
         }
         public void LoadCategoriesToComboBox()
         {
@@ -38,12 +43,12 @@ namespace Restaurant_Management.Model
 
             // Xóa các mục hiện tại trong ComboBox
             cbProduct.Items.Clear();
-
             // Duyệt qua danh sách category và thêm từng category vào ComboBox
             foreach (var category in categories)
             {
                 cbProduct.Items.Add(category.categoryName);
             }
+            cbProduct.SelectedIndex = cbProduct.FindStringExact(catName);
         }
 
         private void frmProductEdit_Load(object sender, EventArgs e)
@@ -81,16 +86,15 @@ namespace Restaurant_Management.Model
         {
             Product product = new()
             {
-                //productId = Convert.ToInt32(txtProductId.Text),
+                productId = productID,
                 productName = txtProductName.Text,
                 productPrice = Convert.ToInt32(txtPrice.Text),
                 categoryName = cbProduct.Text,
-
+                categoryId = tempCategoryID,
             };
 
             CRUDProduct.Update(product, collectionName);
             MessageBox.Show("Edited successfully");
-
         }
 
         private void btnClose_Click_2(object sender, EventArgs e)

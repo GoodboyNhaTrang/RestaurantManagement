@@ -117,7 +117,8 @@ namespace Restaurant_Management.CRUD
                 Connect.InitializeCollection(collectionName);
 
                 var filter = Builders<BsonDocument>.Filter.Eq("productId", product.productId);
-                var set = Builders<BsonDocument>.Update.Set("productName", product.productName).Set("productPrice", product.productPrice).Set("categoryName", product.categoryName);
+                var set = Builders<BsonDocument>.Update.Set("productName", product.productName).Set("productPrice", product.productPrice)
+                    .Set("categoryName", product.categoryName).Set("categoryId", product.categoryId);
 
                 var updateResult = Connect.collection.UpdateOne(filter, set);
 
