@@ -35,6 +35,7 @@ namespace Restaurant_Management.Model
             txtProductName.Text = product.productName.ToString();
             txtPrice.Text = product.productPrice.ToString();
             catName = product.categoryName.ToString();
+            Debug.WriteLine(product.productImage);
         }
         public void LoadCategoriesToComboBox()
         {
@@ -89,15 +90,8 @@ namespace Restaurant_Management.Model
             int catId = 0;
             catId = docs[0].GetElement("categoryId").Value.ToInt32();
 
-            Debug.WriteLine(catId);
-            Debug.WriteLine(cbProduct.Text);
-
-            foreach (var category in docs)
-            {
-                foreach (var item in category)
-                    Debug.WriteLine(item);
-            }
-
+            byte[] imageData = ImageToByteArray(txtImage.Image);
+            BsonBinaryData bsonImageData = new BsonBinaryData(imageData);
             Product product = new()
             {
                 productId = productID,
@@ -105,6 +99,7 @@ namespace Restaurant_Management.Model
                 productPrice = Convert.ToInt32(txtPrice.Text),
                 categoryName = cbProduct.Text,
                 categoryId = catId,
+                productImage = bsonImageData,
             };
 
             CRUDProduct.Update(product, collectionName);
@@ -140,6 +135,14 @@ namespace Restaurant_Management.Model
 
                 // Hiển thị hình ảnh trong PictureBox
                 txtImage.Image = new Bitmap(selectedImagePath);
+            }
+        }
+        private byte[] ImageToByteArray(Image image)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, image.RawFormat);
+                return ms.ToArray();
             }
         }
     }

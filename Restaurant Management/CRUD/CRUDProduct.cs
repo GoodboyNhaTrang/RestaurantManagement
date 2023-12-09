@@ -18,7 +18,8 @@ namespace Restaurant_Management.CRUD
         public string categoryName { get; set; }
 
         public int productPrice { get; set; }
-        public Binary productImage { get; set; }
+        public BsonBinaryData productImage { get; set; }
+
 
         // Các thuộc tính khác nếu cần
     }
@@ -124,7 +125,7 @@ namespace Restaurant_Management.CRUD
 
                 var filter = Builders<BsonDocument>.Filter.Eq("productId", product.productId);
                 var set = Builders<BsonDocument>.Update.Set("productName", product.productName).Set("productPrice", product.productPrice)
-                    .Set("categoryName", product.categoryName).Set("categoryId", product.categoryId);
+                    .Set("categoryName", product.categoryName).Set("categoryId", product.categoryId).Set("productImage", product.productImage);
 
                 var updateResult = Connect.collection.UpdateOne(filter, set);
 

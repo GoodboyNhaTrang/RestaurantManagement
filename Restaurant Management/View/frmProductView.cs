@@ -1,4 +1,5 @@
-﻿using Restaurant_Management.CRUD;
+﻿using MongoDB.Bson;
+using Restaurant_Management.CRUD;
 using Restaurant_Management.Model;
 using System;
 using System.Collections;
@@ -34,11 +35,10 @@ namespace Restaurant_Management.View
                 lb.Items.Clear();
                 lb.Items.Add(_id);
                 lb.Items.Add(productId);
-
                 lb.Items.Add(productName);
                 lb.Items.Add(categoryName);
                 lb.Items.Add(productPrice);
-
+                lb.Items.Add(productImage);
                 CRUDProduct.loadItemsToDataGridView(collectionName, fieldName, qry, frmProductView_listTable, lb);
             }
             catch (Exception ex)
@@ -56,7 +56,10 @@ namespace Restaurant_Management.View
             frmProductAdd frm = new frmProductAdd();
             frm.Show();
         }
-
+        public static byte[] ConvertToByteArray(string str, Encoding encoding)
+        {
+            return encoding.GetBytes(str);
+        }
         private void frmProductView_listTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && frmProductView_listTable.Columns[e.ColumnIndex].Name == "dgvedit")
@@ -70,8 +73,6 @@ namespace Restaurant_Management.View
                     productPrice = Convert.ToInt32(selectedRow.Cells["productPrice"].Value.ToString()),
                     productName = selectedRow.Cells["productName"].Value.ToString(),
                     categoryName = selectedRow.Cells["categoryName"].Value.ToString(),
-
-
                 };
                 frmProductEdit editForm = new frmProductEdit(editProduct);
                 editForm.ShowDialog();
