@@ -55,16 +55,23 @@ namespace Restaurant_Management.CRUD
             Connect.collection.InsertOne(result);
         }
 
-        public static void Read(string collectionName, string FieldName, string qry, DataGridView dataGridView, ListBox listBox)
+        public static List<BsonDocument> Read(string collectionName, string FieldName, string qry)
+        {
+            // Lấy collection từ cơ sở dữ liệu
+            Connect.InitializeCollection(collectionName);
+
+            // Thực hiện truy vấn MongoDB sử dụng biểu thức chính quy
+            var filter = Builders<BsonDocument>.Filter.Regex(FieldName, new BsonRegularExpression(qry, "i"));
+            var documents = Connect.collection.Find(filter).ToList();
+
+            return documents;
+        }
+        public static void loadItemsToDataGridView(string collectionName, string FieldName, string qry, DataGridView dataGridView, ListBox listBox)
         {
             try
             {
-                // Lấy collection từ cơ sở dữ liệu
-                Connect.InitializeCollection(collectionName);
+                var documents = Read(collectionName, FieldName, qry);
 
-                // Thực hiện truy vấn MongoDB sử dụng biểu thức chính quy
-                var filter = Builders<BsonDocument>.Filter.Regex(FieldName, new BsonRegularExpression(qry, "i"));
-                var documents = Connect.collection.Find(filter).ToList();
 
                 // Load dữ liệu vào DataGridView
                 DataTable dataTable = new DataTable();
@@ -108,7 +115,6 @@ namespace Restaurant_Management.CRUD
                 MessageBox.Show(ex.ToString());
             }
         }
-
         public static bool Update(Product product, string collectionName)
         {
             try

@@ -1,10 +1,12 @@
-﻿using Restaurant_Management.CRUD;
+﻿using MongoDB.Bson;
+using Restaurant_Management.CRUD;
 using Restaurant_Management.Model;
 using Restaurant_Management.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -18,7 +20,6 @@ namespace Restaurant_Management.Model
 {
     public partial class frmProductEdit : SimpleAdd
     {
-        private int tempCategoryID;
         private int productID;
         private string catName;
         public frmProductEdit()
@@ -34,7 +35,6 @@ namespace Restaurant_Management.Model
             txtProductName.Text = product.productName.ToString();
             txtPrice.Text = product.productPrice.ToString();
             catName = product.categoryName.ToString();
-            tempCategoryID = Convert.ToInt32(product.categoryId.ToString());
         }
         public void LoadCategoriesToComboBox()
         {
@@ -84,13 +84,27 @@ namespace Restaurant_Management.Model
 
         private void btnSave_Click_2(object sender, EventArgs e)
         {
+            List<BsonDocument> docs = CRUDCategory.Read("categoryName", cbProduct.Text);
+
+            int catId = 0;
+            catId = docs[0].GetElement("categoryId").Value.ToInt32();
+
+            Debug.WriteLine(catId);
+            Debug.WriteLine(cbProduct.Text);
+
+            foreach (var category in docs)
+            {
+                foreach (var item in category)
+                    Debug.WriteLine(item);
+            }
+
             Product product = new()
             {
                 productId = productID,
                 productName = txtProductName.Text,
                 productPrice = Convert.ToInt32(txtPrice.Text),
                 categoryName = cbProduct.Text,
-                categoryId = tempCategoryID,
+                categoryId = catId,
             };
 
             CRUDProduct.Update(product, collectionName);

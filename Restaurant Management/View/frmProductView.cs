@@ -39,7 +39,7 @@ namespace Restaurant_Management.View
                 lb.Items.Add(categoryName);
                 lb.Items.Add(productPrice);
 
-                CRUDProduct.Read(collectionName, fieldName, qry, frmProductView_listTable, lb);
+                CRUDProduct.loadItemsToDataGridView(collectionName, fieldName, qry, frmProductView_listTable, lb);
             }
             catch (Exception ex)
             {
