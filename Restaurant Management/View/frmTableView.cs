@@ -33,7 +33,7 @@ namespace Restaurant_Management.View
                 lb.Items.Add(TableId);
                 lb.Items.Add(TableName);
                 lb.Items.Add(TableStatus);
-                CRUDStaff.LoadDataFromMongoDB(collectionName, fieldName, qry, frmTablesView_listTable, lb);
+                CRUDTable.LoadDataFromMongoDB(collectionName, fieldName, qry, frmTablesView_listTable, lb);
             }
             catch (Exception ex)
             {
@@ -43,6 +43,7 @@ namespace Restaurant_Management.View
 
         private void frmTableView_Load(object sender, EventArgs e)
         {
+         
             GetData();
         }
 

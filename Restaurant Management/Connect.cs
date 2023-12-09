@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Restaurant_Management
 {
-    public  class Connect
+    public class Connect
     {
         public static IMongoCollection<BsonDocument> collection;
         public static void InitializeCollection(string collectionName)
@@ -43,6 +43,12 @@ namespace Restaurant_Management
             private set { _name = value; }
 
         }
+
+        public static void BlurBackground()
+        {
+
+        }
+
 
     }
 }
