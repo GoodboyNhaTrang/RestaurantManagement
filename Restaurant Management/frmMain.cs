@@ -1,4 +1,5 @@
 ﻿using Restaurant_Management.CRUD;
+using Restaurant_Management.Model;
 using Restaurant_Management.View;
 using System;
 using System.Collections.Generic;
@@ -52,18 +53,13 @@ namespace Restaurant_Management
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            lblUser.Text = "Good morning " + Connect.Name;
+            lblUser.Text = Connect.Name;
 
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             addControls(new frmHome());
-        }
-
-        private void guna2Button7_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnCategories_Click(object sender, EventArgs e)
@@ -79,6 +75,22 @@ namespace Restaurant_Management
         private void btnStaff_Click(object sender, EventArgs e)
         {
             addControls(new frmStaffView());
+        }
+
+        private void btnTables_Click(object sender, EventArgs e)
+        {
+            addControls(new frmTableView());
+        }
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+            frmPOS frm = new frmPOS();
+            frm.Show();
+        }
+
+        private void btnKitchen_Click(object sender, EventArgs e)
+        {
+            addControls(new frmKitchenView());
         }
     }
 }

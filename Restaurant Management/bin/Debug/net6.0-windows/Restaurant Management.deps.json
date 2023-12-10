@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Restaurant Management/1.0.0": {
         "dependencies": {
-          "Guna.UI2.WinForms": "2.0.4.5",
+          "Guna.UI2.WinForms": "2.0.4.6",
           "MongoDB.Driver": "2.22.0",
           "MongoDB.Driver.Core": "2.22.0"
         },
@@ -46,14 +46,14 @@
           }
         }
       },
-      "Guna.UI2.WinForms/2.0.4.5": {
+      "Guna.UI2.WinForms/2.0.4.6": {
         "dependencies": {
           "System.Management": "6.0.0"
         },
         "runtime": {
           "lib/net6.0-windows7.0/Guna.UI2.dll": {
-            "assemblyVersion": "2.0.4.5",
-            "fileVersion": "2.0.4.5"
+            "assemblyVersion": "2.0.4.6",
+            "fileVersion": "2.0.4.6"
           }
         }
       },
@@ -225,12 +225,12 @@
       "path": "dnsclient/1.6.1",
       "hashPath": "dnsclient.1.6.1.nupkg.sha512"
     },
-    "Guna.UI2.WinForms/2.0.4.5": {
+    "Guna.UI2.WinForms/2.0.4.6": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lR50db4NzBC0QLAr27q9nrpYsIfWKjOgGnROrPi8AxbwLFE3nTup6ZOpVE/vbrr86eLV//8ys9sIW7j0ix2h+Q==",
-      "path": "guna.ui2.winforms/2.0.4.5",
-      "hashPath": "guna.ui2.winforms.2.0.4.5.nupkg.sha512"
+      "sha512": "sha512-NYzSJp7e47Cz3NgGCHvzadash8ycmxxUnpLg4Rr/MSYG9WDw0HOoTI4SkbDW+HbACrf6tsWYCuzWkgvjuM/O6w==",
+      "path": "guna.ui2.winforms/2.0.4.6",
+      "hashPath": "guna.ui2.winforms.2.0.4.6.nupkg.sha512"
     },
     "Microsoft.Extensions.Logging.Abstractions/2.0.0": {
       "type": "package",

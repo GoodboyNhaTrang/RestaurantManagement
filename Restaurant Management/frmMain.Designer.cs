@@ -126,7 +126,7 @@
             btnKitchen.Text = "Kitchen";
             btnKitchen.TextAlign = HorizontalAlignment.Left;
             btnKitchen.TextOffset = new Point(20, 0);
-            btnKitchen.Click += guna2Button7_Click;
+            btnKitchen.Click += btnKitchen_Click;
             // 
             // btnPOS
             // 
@@ -157,6 +157,7 @@
             btnPOS.Text = "POS";
             btnPOS.TextAlign = HorizontalAlignment.Left;
             btnPOS.TextOffset = new Point(20, 0);
+            btnPOS.Click += btnPOS_Click;
             // 
             // btnStaff
             // 
@@ -218,6 +219,7 @@
             btnTables.Text = "Tables";
             btnTables.TextAlign = HorizontalAlignment.Left;
             btnTables.TextOffset = new Point(20, 0);
+            btnTables.Click += btnTables_Click;
             // 
             // btnProduct
             // 
