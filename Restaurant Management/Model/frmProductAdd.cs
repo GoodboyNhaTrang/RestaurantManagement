@@ -98,6 +98,9 @@ namespace Restaurant_Management.Model
             {
                 List<BsonDocument> category = CRUDCategory.Read("categoryName", cbProduct.Text);
 
+                byte[] imageData = ImageToByteArray(txtImage.Image);
+                BsonBinaryData bsonImageData = new BsonBinaryData(imageData);
+
                 Product product = new()
                 {
                     //productId = Convert.ToInt32(txtProductId.Text),
@@ -105,7 +108,8 @@ namespace Restaurant_Management.Model
                     productPrice = Convert.ToInt32(txtPrice.Text),
                     categoryName = cbProduct.Text,
                     categoryId = category[0].GetElement("categoryId").Value.ToInt32() + 1,
-            };
+                    productImage = bsonImageData,
+                };
 
                 CRUDProduct.Create(product, collectionName);
                 MessageBox.Show("Create successfully");
@@ -117,6 +121,14 @@ namespace Restaurant_Management.Model
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+        private byte[] ImageToByteArray(Image image)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                image.Save(ms, image.RawFormat);
+                return ms.ToArray();
+            }
         }
     }
 }
