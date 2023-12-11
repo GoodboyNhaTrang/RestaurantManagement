@@ -1,4 +1,5 @@
-﻿using Restaurant_Management.CRUD;
+﻿using MongoDB.Bson;
+using Restaurant_Management.CRUD;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,9 +17,11 @@ namespace Restaurant_Management.Model
     public partial class frmProductAdd : SimpleAdd
     {
         private static string collectionName = "Product";
+        private static Image defaultImage;
         public frmProductAdd()
         {
             InitializeComponent();
+            defaultImage = txtImage.Image;
         }
 
         private void frmProductAdd_Load(object sender, EventArgs e)
@@ -89,50 +92,31 @@ namespace Restaurant_Management.Model
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            Product product = new()
+            if (txtImage.Image == (defaultImage))
+                MessageBox.Show("Vui lòng chọn hình ảnh");
+            else
             {
-                //productId = Convert.ToInt32(txtProductId.Text),
-                productName = txtProductName.Text,
-                productPrice = Convert.ToInt32(txtPrice.Text),
-                categoryName = cbProduct.Text,
+                List<BsonDocument> category = CRUDCategory.Read("categoryName", cbProduct.Text);
 
+                Product product = new()
+                {
+                    //productId = Convert.ToInt32(txtProductId.Text),
+                    productName = txtProductName.Text,
+                    productPrice = Convert.ToInt32(txtPrice.Text),
+                    categoryName = cbProduct.Text,
+                    categoryId = category[0].GetElement("categoryId").Value.ToInt32() + 1,
             };
 
-            CRUDProduct.Create(product, collectionName);
-            MessageBox.Show("Create successfully");
+                CRUDProduct.Create(product, collectionName);
+                MessageBox.Show("Create successfully");
+            }
 
         }
 
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnClose_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtProductName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
         }
     }
 }

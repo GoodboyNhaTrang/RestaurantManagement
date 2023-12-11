@@ -83,7 +83,6 @@
             guna2Panel1.Location = new Point(0, 327);
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(367, 59);
-            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // guna2Panel2
             // 
@@ -110,7 +109,6 @@
             label3.Size = new Size(45, 19);
             label3.TabIndex = 1;
             label3.Text = "Name";
-            label3.Click += label3_Click;
             // 
             // txtProductName
             // 
@@ -131,7 +129,6 @@
             txtProductName.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtProductName.Size = new Size(141, 24);
             txtProductName.TabIndex = 2;
-            txtProductName.TextChanged += txtProductName_TextChanged;
             // 
             // label5
             // 
@@ -142,7 +139,6 @@
             label5.Size = new Size(72, 19);
             label5.TabIndex = 1;
             label5.Text = "Categeory";
-            label5.Click += label5_Click;
             // 
             // cbProduct
             // 
@@ -171,7 +167,6 @@
             label6.Size = new Size(38, 19);
             label6.TabIndex = 1;
             label6.Text = "Price";
-            label6.Click += label6_Click;
             // 
             // txtPrice
             // 

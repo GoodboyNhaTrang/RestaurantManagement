@@ -28,14 +28,16 @@ namespace Restaurant_Management.Model
         }
         string collectionName = "Product";
 
-        public frmProductEdit(Product product)
+        public frmProductEdit(int productId)
         {
             InitializeComponent();
-            productID = product.productId;
-            txtProductName.Text = product.productName.ToString();
-            txtPrice.Text = product.productPrice.ToString();
-            catName = product.categoryName.ToString();
-            Debug.WriteLine(product.productImage);
+            List<BsonDocument> product = Read(collectionName, productId);
+            productID = product[0].GetElement("productId").Value.ToInt32();
+            txtProductName.Text = product[0].GetElement("productName").Value.ToString();
+            txtPrice.Text = product[0].GetElement("productPrice").Value.ToString();
+            catName = product[0].GetElement("categoryName").Value.ToString();
+            byte[] imageBytes = product[0].GetElement("productImage").Value.AsBsonBinaryData.Bytes;
+            txtImage.Image = loadImage(imageBytes);
         }
         public void LoadCategoriesToComboBox()
         {
@@ -50,6 +52,14 @@ namespace Restaurant_Management.Model
                 cbProduct.Items.Add(category.categoryName);
             }
             cbProduct.SelectedIndex = cbProduct.FindStringExact(catName);
+        }
+
+        public static Image loadImage(byte[] imageBytes)
+        {
+            using (var ms = new MemoryStream(imageBytes))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void frmProductEdit_Load(object sender, EventArgs e)

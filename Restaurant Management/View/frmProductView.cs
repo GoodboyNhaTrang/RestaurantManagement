@@ -65,16 +65,7 @@ namespace Restaurant_Management.View
             if (e.RowIndex >= 0 && frmProductView_listTable.Columns[e.ColumnIndex].Name == "dgvedit")
             {
                 DataGridViewRow selectedRow = frmProductView_listTable.Rows[e.RowIndex];
-                Product editProduct = new Product()
-                {
-                    productId = Convert.ToInt32(selectedRow.Cells["productId"].Value.ToString()),
-                    categoryId = Convert.ToInt32(selectedRow.Cells["categoryId"].Value.ToString()),
-
-                    productPrice = Convert.ToInt32(selectedRow.Cells["productPrice"].Value.ToString()),
-                    productName = selectedRow.Cells["productName"].Value.ToString(),
-                    categoryName = selectedRow.Cells["categoryName"].Value.ToString(),
-                };
-                frmProductEdit editForm = new frmProductEdit(editProduct);
+                frmProductEdit editForm = new frmProductEdit(Convert.ToInt32(selectedRow.Cells["productId"].Value.ToString()));
                 editForm.ShowDialog();
 
                 // Sau khi chỉnh sửa, cập nhật lại dữ liệu trong DataGridView nếu cần

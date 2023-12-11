@@ -4,6 +4,7 @@ using MongoDB.Libmongocrypt;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,21 +37,14 @@ namespace Restaurant_Management.CRUD
              product = new()
             {
                 productId = product.productId,
-                 productName = product.productName,
-   
-                 productPrice = product.productPrice,
-                 categoryId = product.categoryId,
-                 categoryName = product.categoryName,
+                productName = product.productName,
+                productPrice = product.productPrice,
+                categoryId = product.categoryId,
+                categoryName = product.categoryName,
              };
             var sort = Builders<BsonDocument>.Sort.Descending("productId");
             var findResult = Connect.collection.Find(_ => true).Sort(sort).Limit(1).ToList();
 
-
-            foreach (var bsonDocument in findResult)
-            {
-                product.productId = bsonDocument.GetElement("productId").Value.AsInt32 + 1;
-
-            }
             var result = product.ToBsonDocument();
             result.Remove("_t");
             Connect.collection.InsertOne(result);
@@ -63,6 +57,17 @@ namespace Restaurant_Management.CRUD
 
             // Thực hiện truy vấn MongoDB sử dụng biểu thức chính quy
             var filter = Builders<BsonDocument>.Filter.Regex(FieldName, new BsonRegularExpression(qry, "i"));
+            var documents = Connect.collection.Find(filter).ToList();
+
+            return documents;
+        }
+        public static List<BsonDocument> Read(string collectionName, int Id)
+        {
+            // Lấy collection từ cơ sở dữ liệu
+            Connect.InitializeCollection(collectionName);
+
+            // Thực hiện truy vấn MongoDB sử dụng biểu thức chính quy
+            var filter = Builders<BsonDocument>.Filter.Eq("productId", Id);
             var documents = Connect.collection.Find(filter).ToList();
 
             return documents;
